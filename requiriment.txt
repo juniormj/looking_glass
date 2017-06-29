@@ -1,0 +1,6 @@
+Django==1.7.2
+django-bootstrap3==5.4.0
+ecdsa==0.13
+iptools==0.6.1
+paramiko==1.15.2
+pycrypto==2.6.1

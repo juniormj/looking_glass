@@ -1,0 +1,78 @@
+{% extends "base.html" %}
+{% block titulo %} Index {% endblock titulo %}
+
+{% block conteudo %}
+
+
+
+<form class="form col-sm-5" action="/resultado/" method="post">   {% csrf_token %} 
+  <div style="margin-left: 10px;">
+    <label>
+      Escolha uma opção:
+    </label>
+  </div>
+  <br/>
+
+  <div style="margin-left: 50px;">
+    {% if form.errors %}
+    <div class="alert alert-danger" role="alert">
+      {{ form.opcao.errors }}
+    </div>
+    {% endif %}
+         
+    <div>
+      <label for="id_bgp" style="font-weight: normal;" >
+        <input type="radio" id="id_bgp" name="opcao" value="1" checked style="margin-right: 5px;" />
+        /ip route print
+      </label>
+    </div>
+    <div>
+      <label for="id_ping" style="font-weight: normal;">
+        <input type="radio" id="id_ping" name="opcao" value="2" style="margin-right: 5px;" />
+        /ping
+      </label>
+    </div>
+    <div>
+      <label for="id_trac" style="font-weight: normal;">
+        <input type="radio" id="id_trac" name="opcao" value="3" style="margin-right: 5px;" />
+        /tool traceroute
+      </label>
+    </div>
+    <div>
+      <label for="id_bgp" style="font-weight: normal;" >
+        <input type="radio" id="id_bgp6" name="opcao" value="4" style="margin-right: 5px;" />
+        /ip route print (Version 6)
+      </label>
+    </div>
+    <div>
+      <label for="id_ping6" style="font-weight: normal;">
+        <input type="radio" id="id_ping6" name="opcao" value="5" style="margin-right: 5px;" />
+        /ping (Version 6)
+      </label>
+    </div>
+    <div>
+      <label for="id_trac6" style="font-weight: normal;">
+        <input type="radio" id="id_trac6" name="opcao" value="6" style="margin-right: 5px;" />
+        /tool traceroute (Version 6)
+      </label>
+    </div>
+    <br/>
+  </div>
+
+  <div style="margin-left: 10px;"> 
+    <label for="id_param">
+      Adicionar Parametro: 
+    </label>
+    <input type="text" id="id_cidr" name="cidr"/>
+  </div>
+  <div style="margin-left: 10px;">
+    <input type="submit" class="btn btn-primary" name="enviado" value="Enviar" />
+    <label> | </label>
+    <input type="reset" class="btn btn-primary" name="limpar" value="Limpar" />
+  </div>
+  <br/>
+  <br/>
+</form>
+
+
+{% endblock conteudo %}

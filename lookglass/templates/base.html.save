@@ -1,0 +1,28 @@
+{% load bootstrap3 %}
+
+{% bootstrap_css %}
+{% bootstrap_javascript %}
+<!DOCTYPE html>
+<html>
+<head><title>{% block titulo %} Look Glass | {% endblock titulo %}</title>
+<body>
+
+<div align="center">
+<!--	<img alt="mdbrasil" src="{{ MEDIA_URL }}mdbrasil_logo.png" width="28%"> -->
+	<img alt="mdbrasil" src="/media/mdbrasil_logo.png" width="28%"> 
+
+<br>
+	<font color="gray" style="font-size: xx-large;">MD Brasil TI e Telecom &reg;</font> 
+</div>
+{% bootstrap_messages %}
+<hr width="80%">
+
+{% block conteudo %}
+
+{% endblock conteudo %}
+
+
+<hr width="80%">
+</body>
+</head>
+</html>

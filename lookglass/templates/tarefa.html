@@ -1,0 +1,10 @@
+{% extends 'base.html' %}
+
+{% block content %}
+{% for tasks in tasks_dict %}
+    <ul><li>{{tasks.title}}</li><
+    <li>{{tasks.created_date}}</li>
+    <li>{{tasks.priority}}</li>
+    <li>{{tasks.completed}}</li></ul>
+{% endfor %}
+{% endblock %}

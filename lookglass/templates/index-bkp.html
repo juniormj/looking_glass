@@ -1,0 +1,36 @@
+{% extends "base.html" %}
+{% block titulo %} Index {% endblock titulo %}
+
+{% block conteudo %}
+
+
+<form class="form col-sm-5" action="/resultado/" method="post">
+	{% csrf_token %}
+	
+	
+		<div class="input-group">
+		    <span class="input-group-addon" id="basic-addon3">ip route print</span>
+		    <input type="text" class="form-control" id="cidr" aria-describedby="basic-addon3" name="cidr" />
+		</div> <br/>
+		<div class="input-group">
+		    <span class="input-group-addon" id="basic-addon3">ping</span>
+		    <input type="text" class="form-control" id="ping" aria-describedby="basic-addon3" name="ping">
+		</div>	 <br/>
+		<div class="input-group">
+		    <span class="input-group-addon" id="basic-addon3">traceroute</span>
+		    <input type="text" class="form-control" id="trac" aria-describedby="basic-addon3" name="trac">
+		</div>	 <br/>
+		<div class="input-group">
+		    <span class="input-group-addon" id="basic-addon3">ping6</span>
+		    <input type="text" class="form-control" id="ping6" aria-describedby="basic-addon3" name="ping6">
+		</div>	 <br/>
+		<div class="input-group">
+		    <span class="input-group-addon" id="basic-addon3">traceroute6</span>
+		    <input type="text" class="form-control" id="trac6" aria-describedby="basic-addon3" name="trac6">
+		</div>	 <br/>
+
+		<input type="submit" class="btn btn-primary" name="enviado" value="Enviar" style="margin-left: -19px"/> 
+
+</form>
+
+{% endblock conteudo %}
