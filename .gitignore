@@ -1,0 +1,8 @@
+manage.py
+pip-selfcheck.json
+bin/
+.git
+include
+.gitignore
+lib/
+local/

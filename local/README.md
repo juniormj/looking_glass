@@ -1,1 +1,0 @@
-/home/mdsuporte/looking_glass/README.md
